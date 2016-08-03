@@ -180,7 +180,13 @@ class Manager{
     {
         $array = array();
         foreach($translations as $translation){
-            array_set($array[$translation->locale][$translation->group], $translation->key, $translation->value);
+            if ($this->config['export_nested_arrays']){
+                //Expand Dot notation to nested array
+                array_set($array[$translation->locale][$translation->group], $translation->key, $translation->value);
+            } else {
+                //Export Flat array
+                $array[$translation->locale][$translation->group][$translation->key] = $translation->value;
+            }
         }
         return $array;
     }

@@ -36,4 +36,21 @@ return array(
 	 */
 	'exclude_groups' => array(),
 
+	/**
+	 * When Exporting from Database to the language files
+	 * choose to omit expanding the dot notation to a nested array.
+	 *
+	 * Example:
+	 * By Default
+	 * "some.longer.key" will be expanded to 
+	 * "some" => ["longer" => ["key" => "value"]]
+	 *
+	 * set this param to false to use dot notation in the language file
+	 *
+	 * "some.longer.key" => 'value'
+	 *
+	 * @type boolean
+	 */
+	'export_nested_arrays' => true,
+
 );
