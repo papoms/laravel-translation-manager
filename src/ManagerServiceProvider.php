@@ -86,7 +86,7 @@ class ManagerServiceProvider extends ServiceProvider {
         $router->group($config, function($router)
         {
             $router->get('view/{group}', 'Controller@getView');
-            $router->controller('/', 'Controller');
+            $router->get('/', 'Controller');
         });
 	}
 
