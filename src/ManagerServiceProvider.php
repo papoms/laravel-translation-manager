@@ -92,7 +92,7 @@ class ManagerServiceProvider extends ServiceProvider {
             $router->post('/delete', 'Controller@postDelete');
             $router->post('/import', 'Controller@postImport');
             $router->post('/find', 'Controller@postFind');
-            $router->post('/publish', 'Controller@postPublish')
+            $router->post('/publish', 'Controller@postPublish');
         });
 	}
 
